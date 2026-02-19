@@ -542,7 +542,7 @@ function ReaderParagraph({
     highlights: Highlight[], notes: Note[],
     onSaveNote: (content: string) => void, onDeleteNote: (id: string) => void,
     onMouseUp: () => void, toolActive: boolean,
-    containerRef: React.RefObject<HTMLDivElement>
+    containerRef: React.RefObject<HTMLDivElement | null>
 }) {
     const ref = useRef<HTMLParagraphElement>(null);
     const [isHovered, setIsHovered] = useState(false);
